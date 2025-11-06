@@ -6,11 +6,12 @@
   "scripts": {
     "start": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc -w",
-    "dev":"nodemon dist/server.js"
+    "dev": "nodemon dist/server.js"
   },
   "dependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cookie-parser": "^1.4.10",
+    "node-fetch": "^3.3.2",
     "@types/jsonwebtoken": "^9.0.10",
     "bcrypt": "^6.0.0",
     "body-parser": "^2.2.0",

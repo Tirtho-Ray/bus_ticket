@@ -38,6 +38,7 @@ Installation
 
 1️⃣ Using Git
 Clone the repository and install dependencies:
+
 git clone https://github.com/Tirtho-Ray/bus_ticket.git
 cd bus_ticket
 yarn install        # or npm install
@@ -46,9 +47,12 @@ Your application will run at:
 
 http://localhost:8080
 2️⃣ Using Docker
-Pull the latest Docker image:
+Pull the latest Docker image
+:
 ->docker pull tirtho10/bus_ticket_booking:latest
+
 Run the container with your environment variables:
+
 ->docker run -p 8080:8080 --env-file .env tirtho10/bus_ticket_booking:latest
 -p 8080:8080 → maps container port 8080 to your local port 8080
 

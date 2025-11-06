@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: myapp
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app                # host code sync for live change
+      - /app/node_modules     # prevent node_modules overwrite
+    env_file:
+      - .env                  # load local .env
+    depends_on:
+      - mongo
+    command: yarn dev
+
+  mongo:
+    image: mongo:7
+    container_name: myapp-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

@@ -35,6 +35,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+     "forceConsistentCasingInFileNames": true
   }
 }

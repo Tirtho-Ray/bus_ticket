@@ -1,5 +1,4 @@
-
-import { User } from "../modules/User/user.model";
+import { User } from "../modules/user/user.model";
 import { EmailHelper } from "./emailSender";
 import { generateOtp } from "./sendOTP";
 

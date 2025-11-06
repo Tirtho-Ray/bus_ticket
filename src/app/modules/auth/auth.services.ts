@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import httpStatus from 'http-status';
-import { User } from '../user/user.model';
 import { TLoginUser, TRegisterUser } from './auth.interface';
 import config from '../../config';
 import { USER_ROLE, USER_STATUS } from '../user/user.constant';
 import AppError from '../../errors/appError';
 import { comparePassword } from '../../utils/bcryptHelper';
 import { createToken, verifyToken } from '../../utils/jwtHelper';
+import { User } from '../user/user.model';
+
 
 const registerUser = async (payload: TRegisterUser) => {
   const existingUser = await User.findOne({ email: payload.email });

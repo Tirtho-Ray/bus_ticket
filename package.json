@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "start": "tsc -w"
+    "start": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc -w",
+    "dev":"nodemon dist/server.js"
   },
   "dependencies": {
     "@types/bcrypt": "^6.0.0",

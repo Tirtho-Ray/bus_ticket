@@ -1,6 +1,6 @@
 # Bus Ticket Booking Application
 
-A simple bus ticket booking application built with Node.js, MongoDB, and Stripe.
+A simple bus ticket booking application built with **Node.js**, **MongoDB**, and **Stripe**.
 
 ---
 
@@ -34,21 +34,41 @@ JWT_REFRESH_EXPIRES_IN=1y
 # Stripe Keys
 STRIPE_PUBLISHABLE_KEY=<your_stripe_publishable_key>
 STRIPE_SECRET_KEY=<your_stripe_secret_key>
-```
-#//1️⃣ Using Git
-git clone <[repo-url](https://github.com/Tirtho-Ray/bus_ticket)>
-cd <your-project-directory>
+Installation
 
-#//2️⃣ Using Docker 
+1️⃣ Using Git
+Clone the repository and install dependencies:
+git clone https://github.com/Tirtho-Ray/bus_ticket.git
+cd bus_ticket
+yarn install        # or npm install
+yarn dev            # or npm run start/dev
+Your application will run at:
+
+http://localhost:8080
+2️⃣ Using Docker
 Pull the latest Docker image:
-docker pull tirtho10/bus_ticket_booking:latest
+->docker pull tirtho10/bus_ticket_booking:latest
 Run the container with your environment variables:
-docker run -p 8080:8080 --env-file .env tirtho10/bus_ticket_booking:latest
+->docker run -p 8080:8080 --env-file .env tirtho10/bus_ticket_booking:latest
+-p 8080:8080 → maps container port 8080 to your local port 8080
+
+--env-file .env → loads environment variables from your .env file
+
+Your application will now be accessible at:
+
+http://localhost:8080
+
 
 Features
-
 User authentication using JWT (access & refresh tokens)
+
 Password hashing with bcrypt
+
 Stripe payment integration
+
 MongoDB database support
+
 Dockerized for easy deployment
+
+License
+This project is licensed under the MIT License.
